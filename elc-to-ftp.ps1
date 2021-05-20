@@ -6,11 +6,6 @@ In the 'cmd /c' part of the script, values can be changed as needed using detail
 https://help.eset.com/log_collector/3.2/en-US/?elc_cli.html
 
 For ease of use, the $company variable can be set by altering the script as well.
-
-To run the entire command remotely via ESET Protect's Run Command Task, one could try:
-@echo off
-powershell.exe -NoExit -encoded command (this script encoded into base64)
-
 #>
 
 Set-ExecutionPolicy Bypass -Scope Process
