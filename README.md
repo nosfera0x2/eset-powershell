@@ -1,6 +1,6 @@
 # eset-powershell
 
-This script will:
+This script:
 1) Prompts user for name of their company.
 2) Checks to see if a file named esetlogcollector.exe exists in the users download folder.
 3) Downloads esetlogcollector.exe if need be.
