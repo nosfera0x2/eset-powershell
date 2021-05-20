@@ -1,5 +1,20 @@
-#tested on 0520221 - works
+<#
+May 2021 - Spencer Brown - ESET Technical Support
+
+This script was designed to help streamline the process of ESET log collection.
+In the 'cmd /c' part of the script, values can be changed as needed using details from the ESET help article:
+https://help.eset.com/log_collector/3.2/en-US/?elc_cli.html
+
+For ease of use, the $company variable can be set by altering the script as well.
+
+To run the entire command remotely via ESET Protect's Run Command Task, one could try:
+@echo off
+powershell.exe -NoExit -encoded command (this script encoded into base64)
+
+#>
+
 Set-ExecutionPolicy Bypass -Scope Process
+
 #prompt for name of company, later used as name of archive.
 
 $company = read-host 'What is your company name?'
