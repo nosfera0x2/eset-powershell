@@ -1,5 +1,5 @@
 <#
-May 2021 - Spencer Brown - ESET Technical Support
+May 2021 - ESET Technical Support
 
 This script was designed to help streamline the process of ESET log collection.
 In the 'cmd /c' part of the script, values can be changed as needed using details from the ESET help article:
