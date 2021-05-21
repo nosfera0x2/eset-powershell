@@ -17,12 +17,15 @@ $company = read-host 'What is your company name?'
 $source = 'https://download.eset.com/com/eset/tools/diagnosis/log_collector/latest/esetlogcollector.exe'
 
 Set-Variable -Name destination -Value ($env:userprofile)
+Set-Variable -Name localelc -Value "$destination\downloads\esetlogcollector.exe"
 
 #Tests to see if esetlogcollector.exe is already in the user's downloads folder.
+#Always looks to download most recent version of the tool.
 
-If((Test-Path -Path $destination\Downloads\esetlogcollector.exe -PathType Leaf) -eq 'True') {
+If((Test-Path -Path $localelc -PathType Leaf) -eq 'True') {
 
-	write-host 'ESET Log Collector Tool Found'
+	write-host 'Removing found ESET log collector, and downloading most recent version.'
+	Invoke-WebRequest -uri $source -outfile $destination\downloads\esetlogcollector.exe
 }
 
 else {
