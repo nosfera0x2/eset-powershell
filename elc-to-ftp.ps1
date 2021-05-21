@@ -8,8 +8,6 @@ https://help.eset.com/log_collector/3.2/en-US/?elc_cli.html
 For ease of use, the $company variable can be set by altering the script as well.
 #>
 
-Set-ExecutionPolicy Bypass -Scope Process
-
 #prompt for name of company, later used as name of archive.
 
 $company = read-host 'What is your company name?'
@@ -37,7 +35,9 @@ cmd /c "start /wait %USERPROFILE%\Downloads\esetlogcollector.exe /accepteula /ot
 
 #renames the eset_logs_ps file to an archive with name of the company
 
-Rename-item $env:userprofile\downloads\eset_logs_ps.zip -NewName $env:userprofile\downloads\"$company.zip"
+$ftpname = "$company-$(get-date -f yyyy-MM-dd.ss).zip"
+
+Rename-item $env:userprofile\downloads\eset_logs_ps.zip -NewName $env:userprofile\downloads\$ftpname
 
 #this defines a function which allows for anonymous uploads to the ESET FTP server. 
 
