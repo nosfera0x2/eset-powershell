@@ -62,4 +62,4 @@ function SendByFTP {
     }
 }
 
-SendByFTP -serverFTP 38.90.227.40 -localfile $env:userprofile\downloads\"$company.zip" -remotepath "/support/"
+SendByFTP -serverFTP 38.90.227.40 -localfile $env:userprofile\downloads\$ftpname -remotepath "/support/"
