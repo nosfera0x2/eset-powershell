@@ -25,6 +25,7 @@ Set-Variable -Name localelc -Value "$destination\downloads\esetlogcollector.exe"
 If((Test-Path -Path $localelc -PathType Leaf) -eq 'True') {
 
 	write-host 'Removing found ESET log collector, and downloading most recent version.'
+	Remove-Item -path $localelc -force
 	Invoke-WebRequest -uri $source -outfile $destination\downloads\esetlogcollector.exe
 }
 
