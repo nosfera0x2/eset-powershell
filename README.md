@@ -1,5 +1,10 @@
 # eset-powershell
 
+Disclaimer: This tool has not been officially endorsed by ESET.
+-> Always ensure there is a good back up, and have fun with the script!
+
+# ESET Log Collector to FTP
+
 This script:
 1) Prompts user for name of their company.
 2) Checks to see if a file named esetlogcollector.exe exists in the users download folder.
