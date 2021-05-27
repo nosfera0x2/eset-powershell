@@ -1,7 +1,7 @@
 # eset-powershell
 
 Disclaimer: This tool has not been officially endorsed by ESET.
--> Always ensure there is a good back up, and have fun with the script!
+Always ensure there is a good back up, and have fun with the script!
 
 # ESET Log Collector to FTP
 
